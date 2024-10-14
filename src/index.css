@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo", sans-serif;
+}
+body {
+  background-color: rgba(245, 245, 245, 0.814);
+  font-size: 16px;
+}
+h1 {
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  height: 70%;
+}
+
+input {
+  outline: none;
+  border: 2px solid rgb(150, 150, 150);
+  border-radius: 0.3rem;
+}
+
+input:hover {
+  border: 2px solid #00bfff;
+}
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  padding: 0 12vw;
+  top: 0;
+  background-color: #fff;
+  height: 60px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.373);
+}
+
+.logo {
+  color: #00bfff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logo span {
+  color: coral;
+}
+.add__btn {
+  border: none;
+  background-color: #00bfff;
+  padding: 0.7rem 1.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 4px lightblue;
+  transition: 0.4s;
+}
+
+.add__btn:hover {
+  background-color: #04a0d4;
+}
+.App h1 {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.add-movie {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.add-movie h2 {
+  margin-bottom: 1rem;
+}
+.container {
+  width: 78%;
+  margin: auto;
+}
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.169);
+}
+
+.rating {
+  font-weight: 600;
+  color: coral;
+  margin-bottom: 1rem;
+}
+.movie__desc {
+  color: #7a7a7a;
+  font-size: 1.125em;
+  padding: 0.6rem 0;
+}
+.add-movie input {
+  margin: 5px;
+  padding: 5px 8px;
+}
+
+.filter {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.filter input {
+  margin: 10px;
+  padding: 5px 8px;
+}
+
+.movie-list {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie-img {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 90%;
+  }
+
+  .movie-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .movie-card {
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .movie-list {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
