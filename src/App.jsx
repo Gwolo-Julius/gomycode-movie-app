@@ -3,15 +3,21 @@ import Filter from "./Components/Filter";
 import MovieList from "./Components/MovieList";
 import interstella from "./assets/interstella.png";
 import Inception from "./assets/inception.png";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import MovieDetail from "./MovieDetail";
+
 function App() {
   const [movies, setMovies] = useState([
     {
+      id: 1,
       title: "Inception",
       description: "A mind-bending thriller by Christopher Nolan.",
       posterURL: Inception,
       rating: 10,
     },
     {
+      id: 2,
       title: "Interstellar",
       description: "A journey through space and time.",
       posterURL: interstella,
@@ -62,6 +68,12 @@ function App() {
       </div>
       <div className="App container">
         <h1>Movie App</h1>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:id" element={<MovieDetail />} />
+          </Routes>
+        </Router>
 
         <Filter
           handleTitleFilter={handleTitleFilter}
